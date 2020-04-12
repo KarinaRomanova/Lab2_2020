@@ -41,9 +41,9 @@ Point Point::operator - (Point SecondPoint)
 
  }
 
- ostream& operator<< (ostream& out, const Point& FirstPoint)
+ ostream& operator<< (ostream& out,  Point& point)
  {
-	 out << "Point(" << FirstPoint.x << ", " << FirstPoint.y << ", " << FirstPoint.z << ")";
+	 out << "Point(" <<point.x << ", " << point.y << ", " << point.z << ")";
 
 	 return out;
  }
