@@ -1,13 +1,26 @@
 #pragma once
 class Point
 {
-private:
-	long double _x;
-	long double _y;
-	long double _z;
+protected:
+	long double x;
+	long double y;
+	long double z;
+
 public:
 
 	Point(long double x, long double y, long double z);
+
+	Point operator + (Point SecondPoint);
+	Point operator + (int a);
 	
-	//void GetPoint();
+
+	Point operator - (Point SecondPoint);
+	Point operator - (int a);
+	
+	Point operator += (Point SecondPoint);
+	
+	friend bool operator== (const Point& FirstPoint, const Point& SecondPoint);
+	friend bool operator!= (const Point& FirstPoint, const Point& SecondPoint);
+	friend ostream& operator<< (ostream& out, const Point& FirstPoint);
+	void GetPoint();
 };
