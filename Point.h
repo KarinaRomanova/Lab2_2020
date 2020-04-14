@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+using namespace std;
+
 class Point
 {
 private:
@@ -17,10 +20,11 @@ public:
 	Point operator - (Point SecondPoint);
 	Point operator - (int a);
 	
-	Point operator += (Point SecondPoint);
+	Point& operator= (Point SecondPoint);
 	
 	friend bool operator== (const Point& FirstPoint, const Point& SecondPoint);
 	friend bool operator!= (const Point& FirstPoint, const Point& SecondPoint);
-	friend ostream& operator<< (ostream& out,  Point& point);
-	void GetPoint();
+	friend std::ostream& operator<< (std::ostream& out, Point& point);
+
+	void SetNewCoord();
 };
