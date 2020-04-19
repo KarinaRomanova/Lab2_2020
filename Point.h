@@ -22,8 +22,8 @@ public:
 	
 	Point& operator= (Point SecondPoint);
 	
-	friend bool operator== (const Point& FirstPoint, const Point& SecondPoint);
-	friend bool operator!= (const Point& FirstPoint, const Point& SecondPoint);
+	bool operator== (const Point& SecondPoint);
+	 bool operator!= (const Point& SecondPoint);
 	friend std::ostream& operator<< (std::ostream& out, Point& point);
 
 	void SetNewCoord();

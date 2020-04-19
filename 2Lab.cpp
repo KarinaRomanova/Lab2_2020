@@ -5,7 +5,6 @@ using namespace std;
 //+, -, =, ==, !==, <<
 
 void SetCoord(long double& x, long double& y, long double& z);
-void SetNewCoord(long double& x, long double& y, long double& z);
 
 int main() 
 {

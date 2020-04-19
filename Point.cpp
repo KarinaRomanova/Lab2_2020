@@ -32,14 +32,14 @@ Point Point::operator - (Point SecondPoint)
 	return *this;
 }
 
- bool operator== (const Point& FirstPoint, const Point& SecondPoint)
+ bool Point:: operator== (const Point& SecondPoint)
  {
-	 return (FirstPoint.x == SecondPoint.x && FirstPoint.y == SecondPoint.y && FirstPoint.z== SecondPoint.z);
+	 return (this->x == SecondPoint.x && this->y == SecondPoint.y && this->z == SecondPoint.z);
 	
  }
- bool operator!= (const Point& FirstPoint, const Point& SecondPoint)
+ bool Point::operator!= (const Point& SecondPoint)
  {
-	 return !(FirstPoint==SecondPoint);
+	 return (this->x != SecondPoint.x && this->y != SecondPoint.y && this->z != SecondPoint.z);
  }
  std::ostream& operator<< (std::ostream& out, Point& point)
  {
