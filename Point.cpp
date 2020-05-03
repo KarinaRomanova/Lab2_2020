@@ -26,31 +26,40 @@ Point Point::operator - (Point SecondPoint)
 	return Point(this->x - SecondPoint.x, this->y - SecondPoint.y, this->z - SecondPoint.z);
 }
 
- Point& Point :: operator=  (Point SecondPoint)
+ Point Point :: operator+=  (Point SecondPoint)
 {
-	this->x = SecondPoint.x, this->y = SecondPoint.y, this->z = SecondPoint.z;
-	return *this;
+	return Point(this->x = SecondPoint.x, this->y = SecondPoint.y, this->z = SecondPoint.z);
 }
+<<<<<<< HEAD
 
  bool Point:: operator== (const Point& SecondPoint)
+=======
+ bool operator== (const Point& FirstPoint, const Point& SecondPoint)
+>>>>>>> parent of acdb1e7... final
  {
 	 return (this->x == SecondPoint.x && this->y == SecondPoint.y && this->z == SecondPoint.z);
 	
  }
  bool Point::operator!= (const Point& SecondPoint)
  {
+<<<<<<< HEAD
 	 return (this->x != SecondPoint.x && this->y != SecondPoint.y && this->z != SecondPoint.z);
+=======
+	 return (FirstPoint.x != SecondPoint.x && FirstPoint.y != SecondPoint.y && FirstPoint.z != SecondPoint.z);
+
+>>>>>>> parent of acdb1e7... final
  }
- std::ostream& operator<< (std::ostream& out, Point& point)
+
+ ostream& operator<< (ostream& out,  Point& point)
  {
-	 out << "\n("<<point.x << ", " << point.y << ", " << point.z<<")";
+	 out << "Point(" <<point.x << ", " << point.y << ", " << point.z << ")";
+
 	 return out;
  }
 
- void Point::SetNewCoord() {
-	 cout << "\n\nВедите координаты:\n";
-	 cout << "\tx = ";		cin >> x;
-	 cout << "\ty = ";		cin >> y;
-	 cout << "\tz = ";		cin >> z;
-	 Point point(this->x, this ->y,this-> z);
- }
+void Point::GetPoint()
+{
+	cout << x<<"\n";
+	cout << y << "\n";
+	cout << z << "\n";
+}
