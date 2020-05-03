@@ -30,24 +30,18 @@ Point Point::operator - (Point SecondPoint)
 {
 	return Point(this->x = SecondPoint.x, this->y = SecondPoint.y, this->z = SecondPoint.z);
 }
-<<<<<<< HEAD
 
- bool Point:: operator== (const Point& SecondPoint)
-=======
+
+
  bool operator== (const Point& FirstPoint, const Point& SecondPoint)
->>>>>>> parent of acdb1e7... final
+
  {
-	 return (this->x == SecondPoint.x && this->y == SecondPoint.y && this->z == SecondPoint.z);
+	 return (FirstPoint.x == SecondPoint.x && FirstPoint.y == SecondPoint.y && FirstPoint.z== SecondPoint.z);
 	
  }
- bool Point::operator!= (const Point& SecondPoint)
+bool operator!= (const Point& FirstPoint, const Point& SecondPoint)
  {
-<<<<<<< HEAD
-	 return (this->x != SecondPoint.x && this->y != SecondPoint.y && this->z != SecondPoint.z);
-=======
-	 return (FirstPoint.x != SecondPoint.x && FirstPoint.y != SecondPoint.y && FirstPoint.z != SecondPoint.z);
-
->>>>>>> parent of acdb1e7... final
+return !(FirstPoint==SecondPoint);
  }
 
  ostream& operator<< (ostream& out,  Point& point)
